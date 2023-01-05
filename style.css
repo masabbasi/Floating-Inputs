@@ -76,7 +76,6 @@ a {
   margin-bottom: 2rem;
 }
 
-input,
 label {
   transition: all 0.5s ease;
   touch-action: manipulation;
@@ -100,6 +99,7 @@ label {
   padding: 1rem 2rem;
   height: 4rem;
   border-radius: 0.5rem;
+	caret-color:rgb(163, 253, 253);
 }
 
 input::placeholder {
@@ -121,6 +121,28 @@ input:not(:placeholder-shown) + label {
   letter-spacing: 0.05em;
 }
 
+input:-webkit-autofill { 
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: rgb(8, 226, 226);
+}
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+} */
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 3rem #141627 inset;
+} */
+
+
+/* We could turn off autocomplete: <form autocomplete="off">...</form */
+
 .btn__login {
   border: none;
   background-color: rgba(2, 126, 126, 0.795);
@@ -129,11 +151,15 @@ input:not(:placeholder-shown) + label {
   border-radius: 0.5rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
+	outline:none;
 }
 
 .btn__login:hover {
   background-color: rgba(6, 177, 177, 0.795);
 }
+/* input:autofill {
+  background: transparent !important;
+} *
 
 @media (max-width: 500px) {
   .btn__login {
