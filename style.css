@@ -1,0 +1,142 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* font-size: 10px; */
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: #141627;
+  font-family: "Roboto", sans-serif;
+}
+
+.back {
+  width: 7rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: brown;
+  border-radius: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.back a {
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 80vh;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reset Style */
+a {
+  text-decoration: none;
+}
+
+.box {
+  width: 30rem;
+  height: 23rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(6, 248, 248);
+  padding: 1rem;
+}
+
+.login__title {
+  color: rgb(6, 248, 248);
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+input,
+label {
+  transition: all 0.5s ease;
+  touch-action: manipulation;
+}
+
+label {
+  color: rgb(6, 248, 248);
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+#username,
+#password {
+  width: 100%;
+  border: 0.1rem solid rgb(6, 248, 248);
+  color: rgb(8, 226, 226);
+  outline: none;
+  background-color: transparent;
+  padding: 1rem 2rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+input::placeholder {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+input:focus::placeholder {
+  opacity: 1;
+  color: rgba(6, 248, 248, 0.418);
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  transform: translate(0, -3.2rem) scale(0.8);
+  background-color: #141627;
+  padding: 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn__login {
+  border: none;
+  background-color: rgba(2, 126, 126, 0.795);
+  padding: 1rem 2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.btn__login:hover {
+  background-color: rgba(6, 177, 177, 0.795);
+}
+
+@media (max-width: 500px) {
+  .btn__login {
+    cursor: none;
+  }
+}
